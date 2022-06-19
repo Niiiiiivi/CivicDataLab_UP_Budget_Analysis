@@ -1,0 +1,36 @@
+---
+title: "UP Budget Analysis "
+author: "Nivedita Gupta"
+output: 
+        html_document:
+          theme: cerulean
+          
+          
+          
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## A Brief Overview of Dataset and Statistic 
+To find out expenditure on School Education, data on Elementary, Secondary and Higher level of Education was taken from the dataset "district_level_mapping_2017".  The four Departments that spend on School Education as was revealed in the dataset were- Pension and Other Retirement Benefits; General Education; Sports and Youth Services; Art and Culture. These departments include expenditure of recurring nature- paying for teachers’ salary, spending on providing facilities in school like food, electricity expense, sports equipment and other tools to aid in co-curricular activities. The other area in which expenditure on school is incurred in the form of capital nature that is to buy assets like purchasing furniture or new building of school to set up new schools.  
+
+There are 17 districts which have reported the expenditure on school, the population of the districts along with the names is provided in file “18_district_pop”. The population for the districts has been taken from Census 2011 and a new file was thus prepared in excel to be used later in R. The data on Population of UP was taken from Census 2011 which reported UP population to be 19.98 Crores. 
+
+
+## Data Analysis 
+
+The “Answer1” data frame, shows the share of expenditure of each Ministry in School Education. To find the share of each ministry, expenditure was individual ministry was calculated and divided by total expenditure of all ministries. The data shows that General Education Ministry incurs most expenditure on School Education. According to the README file of UP Budget 2017, General Education encompasses expenditure of Revenue expenditure, any expenditure that does not fit in any other category can be clubbed into this category. After, General Education the ministry in Pension and Other Retirement Benefits incurs expenditure. A study by CRY NGO shows that UP government spend most on teachers’ salary with an aim to provide best teachers to impart best education. Pension and Other Retirement Benefits given to teachers could be one way of encouraging more teachers to join the field of education and to improve teacher-pupil ratio. Sports and Youth Services has very low spending and similarly for Art and Culture. The data shows there is need to focus more on Sports and Art so the youth of UP can explore areas other than academics too. State Youth Policy of UP can focus more on these areas. 
+
+The “Answer 2” data frame shows share of capital expenditure in the total expenditure incurred on School Education. 2,436.1 Crores is the absolute amount of expenditure incurred on school education which accounts for 2.13% of total expenditure. To say whether the expenditure is sufficient or not, an analysis on the basis of time series trend would provide a better picture. Also, cross state comparison would throw more light. 
+
+The “Answer 3.1” captures Total Expenditure on School Education per capita. Total expenditure has been divided by total population of UP and not the population in age group of school going students. The data shows that UP spends 5,614 (appx) per person on education. The reason for choosing total population over student aged population is because Census was done in 2011, thus some of those who were students in 2011 will not be studying in school in 2017 while there will be some new entries in school in 2017which Census 2011 didn’t capture. Thus, for easy analysis total population was chosen. 
+
+“Answer 3.2” shows School Education incurred by 17 districts in UP on per person basis. The data on population was converted in Crores to keep both variables, expenditure and population in same unit. The expenditure includes all four ministries within every district including capital outlay on education. 
+
+“Answer.Revenue. 4.1” shows Ranks of each district with respect to how much fund has been utilized out of total fund allocated for school education by each district respectively. The data frame captures General Expenditure which contributes majority of expenditure in school education. Thus, study of General Education suffices to show the position of utilization of funds. The table shows that Lucknow tops the list while Meerut comes at last. The utilization of funds has been converted into percentage for easy analysis. 
+
+“Answer.Capital.4.2” shows Ranks of each district with respect to how much fund has been utilized out of total fund allocated for school education by each district respectively. The data frame captures Capital Outlay on Education. In the table Basti tops the list while Lucknow Coll. comes at last. 
+
